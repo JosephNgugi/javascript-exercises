@@ -14,7 +14,7 @@ describe("functions", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-            
+            function myFunction(){}
             ////////////////////////////////////////////////////////////////////
         });
     });
@@ -27,7 +27,9 @@ describe("functions", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-         
+         const myFunction = function myFunction(){
+             
+         }
             ////////////////////////////////////////////////////////////////////
 
             myFunction(); // myFunction should be callable now
@@ -40,7 +42,8 @@ describe("functions", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+         
+         
             ////////////////////////////////////////////////////////////////////
 
             if (myFunction !== otherFunction) {
@@ -577,8 +580,8 @@ describe("functions", function() {
             // by calling addEventListener(). As soon as there is an event,
             // it notifies all listeners by calling them.
             const eventEmitter = {
-                listeners: [],
-                addEventListener(listener) {
+                  listeners: [],
+                addEventListener(listeners) {
                     this.listeners.push(listener);
                 },
                 emit() {
@@ -615,16 +618,16 @@ describe("functions", function() {
             // method that allows to remove event listeners again.
             const eventEmitter = {
                 listeners: [],
-                addEventListener(listener) {
-                    this.listeners.push(listener);
+                addEventListener(listeners) {
+                    this.listeners.push(listeners);
                 },
                 // The removeEventListener() implementation looks if the listener has been registered previously.
                 // It throws an error if not.
                 // Please note: Most real-world implementations of an event emitter would even not throw an error.
                 // The would just ignore this kind of error. Then the event listener would still be active and
                 // you would be wondering why because you thought that you've removed it.
-                removeEventListener(listener) {
-                    const index = this.listeners.indexOf(listener);
+                removeEventListener(listeners) {
+                    const index = this.listeners.indexOf(listeners);
 
                     if (index === -1) {
                         throw new Error(

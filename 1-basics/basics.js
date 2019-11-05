@@ -318,7 +318,8 @@ describe("basics", function () {
             ////////////////////////////////////////////////////////////////////
             // Can you find a value that is typeof "object" but also casts to `false`?
             // ✏️ ADD CODE HERE ✏️
-
+           
+           
             ////////////////////////////////////////////////////////////////////
             var falseyThing = null;
             if (falseyThing) {
@@ -366,7 +367,7 @@ describe("basics", function () {
             // You can create objects that reference themselves.
             // But you need two steps to do it.
             // ✏️ ADD CODE HERE ✏️
-
+            
             ////////////////////////////////////////////////////////////////////
 
             expect(object.object).to.equal(object);
